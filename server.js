@@ -22,7 +22,7 @@ app.post('/users', (req, res) => {
 
 const restrict = (req, res, next) => {
   try {
-    const token = req.header.authorization.split(" ")[1];
+    const token = req.headers.authorization.split(" ")[1];
     const userData = jwt.verify(token, SECRET);
     res.locals.userData = userData;
     next();

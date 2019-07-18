@@ -14,10 +14,11 @@ const main = async () => {
   try {
     const secretResp = await axios.get(`${BASE_URL}/answer`,
       {
-        header: {
+        headers: {
           Authorization: `Bearer ${token}`,
         },
       });
+    console.log(secretResp.data);
   } catch (e) {
     console.log(e.message);
   }
