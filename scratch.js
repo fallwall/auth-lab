@@ -15,7 +15,7 @@ const main = async () => {
     const secretResp = await axios.get(`${BASE_URL}/answer`,
       {
         header: {
-          Auuthorization: `Bearer ${token}`,
+          Authorization: `Bearer ${token}`,
         },
       });
   } catch (e) {
